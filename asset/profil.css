@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+
+.merriweather-uniquifier {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(image/bgnewspaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Merriweather;
+}
+
+.bg-blur {
+  background: #ffffff4b;
+  padding: 20px 0px 0px;
+  backdrop-filter: blur(3px);
+}
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    z-index: 3;
+    background: linear-gradient(to right, #CB0404, #7D0A0A);
+    backdrop-filter: blur(2px);
+}
+
+nav li {
+    height: 55px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #CB0404;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav .logo {
+    width: 45px;
+    height: auto;
+}
+
+/* menu Profil */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: #CB0404; /* Biru tua khas pemerintah */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 20px; /* Memberi jarak antar seksi */
+}
+
+/* --- Tata Letak Utama (Flexbox) --- */
+.profile-layout {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    gap: 40px; /* Jarak antara kolom kiri dan kanan */
+}
+
+.profile-left {
+    flex: 1; /* Mengambil 1 bagian dari ruang */
+    min-width: 300px;
+}
+
+.profile-right {
+    flex: 2; /* Mengambil 2 bagian dari ruang (lebih lebar) */
+    min-width: 300px;
+}
+
+/* --- Styling Bagian Kiri --- */
+.vision-section p {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* --- Styling Tabel --- */
+.table-section h2 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menyatukan border */
+    font-size: 0.95em;
+}
+
+table thead th {
+    background-color: #e9eff5; /* Warna latar header tabel */
+    color: #CB0404;
+    font-weight: 600;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Efek zebra-striping */
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Efek hover pada baris */
+}
+
+
+/* --- Styling Bagian Kanan (Tentang & Pimpinan) --- */
+.about-section p {
+    text-align: justify;
+}
+
+.leadership-section {
+    margin-top: 30px;
+}
+
+.leader-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #CB0404; /* Aksen warna biru */
+    margin-bottom: 20px; /* Jarak antara kartu ketua dan wakil */
+    gap: 20px;
+}
+
+.leader-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Agar gambar tidak gepeng dan tetap persegi */
+    border: 3px solid #ddd;
+}
+
+.leader-info h3 {
+    margin: 0 0 5px 0;
+    color: #003366;
+}
+
+.leader-info .title {
+    font-weight: bold;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+.leader-info .bio {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+/* --- Desain Responsif untuk Layar Kecil (Mobile) --- */
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    }
+
+    .leader-card {
+        flex-direction: column; /* Menumpuk gambar di atas teks */
+        text-align: center;
+    }
+}
+/* link terkait */
+.link-terkait {
+  padding: 30px 40px 10px;
+  background: linear-gradient(to top, #CB0404 6%, rgba(179, 0, 0, 0) 100%);
+}
+
+.judul-link {
+  justify-items: center;
+}
+
+.link-terkait h4 {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 3px solid #fdd077;
+  margin-bottom: 15px;  
+}
+
+.logo-terkait {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding-top: 10px;
+  padding-bottom: 28px;
+  justify-content: center;
+}
+
+.logo-terkait img {
+  height: 80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  float: right;
+}
+
+/* footer */
+.footer-container {
+  background-color: #CB0404;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-left: 38px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-column a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #ffd700;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.footer-info {
+  text-align: center;
+  max-width: 400px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-info .logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.kopikanan {
+   background-color: #700101;
+   padding: 20px 100px;
+}
+
+.kopikanan p {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+

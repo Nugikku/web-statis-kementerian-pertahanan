@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+
+.merriweather-uniquifier {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(image/bgnewspaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Merriweather;
+}
+
+.bg-blur {
+  background: #ffffff4b;
+  padding: 0px 0px 0px;
+  backdrop-filter: blur(3px);
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    z-index: 3;
+    background: linear-gradient(to right, #CB0404, #7D0A0A);
+    backdrop-filter: blur(2px);
+}
+
+nav li {
+    height: 55px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #CB0404;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav .logo {
+    width: 45px;
+    height: auto;
+}
+
+/* Menu berita */
+/* Kontainer utama slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    overflow: hidden; 
+    background-color: #000;
+    /* Hapus transisi tinggi karena sudah tidak relevan */
+}
+
+/* Pengaturan untuk setiap slide (frame) */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Gaya untuk gambar di dalam slide */
+.slide img {
+    width: 100%;
+    /* TAMBAHKAN KEMBALI INI untuk memastikan gambar mengisi kontainer */
+    height: 100%;
+    object-fit: cover; /* Mencegah gambar gepeng, mungkin memotong sebagian gambar */
+    display: block;
+}
+
+/* KEYFRAMES, KELAS ANIMASI, DAN TOMBOL TETAP SAMA... */
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slideOutToLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slideOutToRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+.slide-in-right { animation: slideInFromRight 0.5s ease-in-out; }
+.slide-out-left { animation: slideOutToLeft 0.5s ease-in-out; }
+.slide-in-left { animation: slideInFromLeft 0.5s ease-in-out; }
+.slide-out-right { animation: slideOutToRight 0.5s ease-in-out; }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+.next { right: 0; }
+.prev { left: 0; }
+.prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.6); }
+
+/* sub judul */
+.subjudul_berita {
+  margin-top: 25px;
+}
+
+.subjudul_berita p {
+  text-align: center;
+  font-size: 24px;
+}
+
+
+.berita-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 80px;
+}
+
+.berita-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 8px 14px 20px  rgba(0, 0, 0, 0.603);
+  overflow: hidden;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.berita-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.berita-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.berita-content h3 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: black;
+}
+
+.btn {
+  align-self: start;
+  background-color: red;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #CB0404;
+}
+
+/* link terkait */
+.link-terkait {
+  padding: 30px 40px 10px;
+  background: linear-gradient(to top, #CB0404 6%, rgba(179, 0, 0, 0) 100%);
+}
+
+.judul-link {
+  justify-items: center;
+}
+
+.link-terkait h4 {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 3px solid #fdd077;
+  margin-bottom: 15px;  
+}
+
+.logo-terkait {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding-top: 10px;
+  padding-bottom: 28px;
+  justify-content: center;
+}
+
+.logo-terkait img {
+  height: 80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  float: right;
+}
+
+/* footer */
+.footer-container {
+  background-color: #CB0404;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-left: 38px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-column a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #ffd700;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.footer-info {
+  text-align: center;
+  max-width: 400px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-info .logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.kopikanan {
+   background-color: #700101;
+   padding: 20px 100px;
+}
+
+.kopikanan p {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+

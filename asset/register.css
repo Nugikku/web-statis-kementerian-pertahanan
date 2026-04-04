@@ -1,0 +1,139 @@
+/* Pengaturan Dasar dan Latar Belakang Gradien */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Gradien merah keemasan untuk latar belakang */
+    background: linear-gradient(45deg, #8B0000, #DAA520);
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Animasi Gradien */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Kontainer untuk Form Login dan Registrasi */
+.form-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Judul Form */
+.form-box h1 {
+    color: #FFD700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+/* Grup untuk Label dan Input */
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #DAA520;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group input:focus {
+    border-bottom-color: #FFD700;
+}
+
+/* Tombol (berlaku untuk <button> dan <a>) */
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 12px 15px; /* Atas-bawah 12px, Kiri-kanan 15px (gepeng) */
+    border: none;
+    border-radius: 5px;
+    background-color: #DAA520;
+    color: #4B0000;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none; /* Menghilangkan garis bawah dari <a> */
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.form-button:hover {
+    background-color: #FFD700;
+}
+
+.form-button:active {
+    transform: scale(0.98);
+}
+
+/* Tautan di bagian bawah form */
+.bottom-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.bottom-link a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom-link a:hover {
+    text-decoration: underline;
+}
+
+/* Kontainer untuk Pesan Sukses */
+.success-box {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.success-box h1 {
+    color: #FFD700;
+    margin-top: 0;
+}

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+
+.merriweather-uniquifier {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(image/bgnewspaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Merriweather;
+}
+
+.bg-blur {
+  background: #ffffff4b;
+  padding: 20px 0px 0px;
+  backdrop-filter: blur(3px);
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    z-index: 3;
+    background: linear-gradient(to right, #CB0404, #7D0A0A);
+    backdrop-filter: blur(2px);
+}
+
+nav li {
+    height: 55px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #CB0404;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav .logo {
+    width: 45px;
+    height: auto;
+}
+
+/* Kontainer utama untuk menu */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.section-title {
+  font-size: 24px;
+  border-bottom: 2px solid #c0392b;
+  color: #c0392b;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.profile-image {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #CB0404;
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.user-email {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Profile Info */
+.profile-info {
+  flex: 2;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: 500;
+}
+
+.info-item input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Button */
+.edit-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #CB0404, #7D0A0A);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+  background: #A00000;
+}
+
+.gap-akun {
+  display: flex;
+  gap: 50px;
+}
+/* link terkait */
+.link-terkait {
+  padding: 30px 40px 10px;
+  background: linear-gradient(to top, #CB0404 6%, rgba(179, 0, 0, 0) 100%);
+}
+
+.judul-link {
+  justify-items: center;
+}
+
+.link-terkait h4 {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 3px solid #fdd077;
+  margin-bottom: 15px;  
+}
+
+.logo-terkait {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding-top: 10px;
+  padding-bottom: 28px;
+  justify-content: center;
+}
+
+.logo-terkait img {
+  height: 80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  float: right;
+}

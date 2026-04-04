@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+
+.merriweather-uniquifier {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(image/bgnewspaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Merriweather;
+}
+
+.bg-blur {
+  background: #ffffff4b;
+  padding: 20px 0px 0px;
+  backdrop-filter: blur(3px);
+}
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    z-index: 3;
+    background: linear-gradient(to right, #CB0404, #7D0A0A);
+    backdrop-filter: blur(2px);
+}
+
+nav li {
+    height: 55px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #CB0404;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav .logo {
+    width: 45px;
+    height: auto;
+}
+
+/* menu lapor */
+.layanan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.layanan-1 {
+    color: #CB0404;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.layanan-2 {
+    text-align: center;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.form-container {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 2px solid #e9ecef;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #CB0404, #7D0A0A);
+}
+
+.form-container h3 {
+    background: linear-gradient(135deg, #CB0404, #7D0A0A);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: -30px -30px 20px -30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 2px 10px rgba(203, 4, 4, 0.3);
+}
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid #CB0404;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+legend {
+    padding: 0 10px;
+    color: #CB0404;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.category-text {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border-left: 4px solid #CB0404;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Merriweather", serif;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #CB0404;
+    box-shadow: 0 0 0 3px rgba(203, 4, 4, 0.1);
+    transform: translateY(-1px);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.note {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background: linear-gradient(135deg, #CB0404, #7D0A0A);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(203, 4, 4, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a30202, #5D0707);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(203, 4, 4, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* History Section */
+#riwayat-laporan {
+    margin-top: 0;
+    padding: 25px;
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#riwayat-laporan h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    border-bottom: 3px solid #CB0404;
+    padding-bottom: 10px;
+}
+
+.riwayat-item {
+    margin-bottom: 20px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 20px;
+    border-left: 5px solid #CB0404;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.riwayat-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.riwayat-item strong {
+    color: #CB0404;
+    font-size: 1.1em;
+}
+
+.riwayat-item small {
+    color: #666;
+    font-style: italic;
+}
+
+.riwayat-item .report-detail {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid #fdd700;
+}
+
+.riwayat-item hr {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, #CB0404, transparent);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+.empty-state::before {
+    content: "📋";
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Success Animation */
+.success-message {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* link terkait */
+.link-terkait {
+  padding: 30px 40px 10px;
+  background: linear-gradient(to top, #CB0404 6%, rgba(179, 0, 0, 0) 100%);
+}
+
+.judul-link {
+  justify-items: center;
+}
+
+.link-terkait h4 {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 3px solid #fdd077;
+  margin-bottom: 15px;  
+}
+
+.logo-terkait {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding-top: 10px;
+  padding-bottom: 28px;
+  justify-content: center;
+}
+
+.logo-terkait img {
+  height: 80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  float: right;
+}
+
+/* footer */
+.footer-container {
+  background-color: #CB0404;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-left: 38px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-column a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #ffd700;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.footer-info {
+  text-align: center;
+  max-width: 400px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-info .logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.kopikanan {
+   background-color: #700101;
+   padding: 20px 100px;
+}
+
+.kopikanan p {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
