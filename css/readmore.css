@@ -28,8 +28,11 @@ body {
 }
 
 nav {
-    background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+    background-color: #9D0000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -38,32 +41,45 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
     list-style: none;
-    z-index: 3;
-    background: linear-gradient(to right, #CB0404, #7D0A0A);
-    backdrop-filter: blur(2px);
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
-nav li {
-    height: 55px;
+nav li.nav-logo {
+    margin-right: auto;
+}
+
+nav li.nav-logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: white;
+    padding: 10px 0;
+}
+
+nav li.nav-logo a:hover {
+    background-color: transparent;
+    color: white;
 }
 
 nav a {
-    height: 100%;
-    padding: 0 30px;
+    padding: 18px 25px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #ffffff;
-    color: #CB0404;
-}
-
-nav li:first-child {
-    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fdd700;
 }
 
 nav .logo {
