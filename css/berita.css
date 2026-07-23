@@ -174,20 +174,21 @@ nav .logo {
   text-align: center;
   max-width: 800px;
   padding: 0 20px;
-  color: #fff;
+  color: #222;
 }
 
 .subjudul_berita h2 {
   font-size: 32px;
-  color: #fdd700;
+  color: #9D0000;
   margin-bottom: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .subjudul_berita p {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
+  color: #444;
 }
 
 /* Features */
@@ -239,26 +240,31 @@ nav .logo {
 }
 
 .chip {
-  background-color: rgba(255,255,255,0.2);
-  color: white;
+  background-color: rgba(157, 0, 0, 0.05);
+  color: #9D0000;
   padding: 8px 20px;
   border-radius: 20px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(157, 0, 0, 0.3);
 }
 
 .chip:hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: #9D0000;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(157, 0, 0, 0.3);
 }
 
 .chip.active {
-  background-color: #fdd700;
-  color: #9D0000;
+  background-color: #9D0000;
+  color: #ffffff;
   font-weight: bold;
-  border-color: #fdd700;
+  border-color: #9D0000;
+  box-shadow: 0 4px 8px rgba(157, 0, 0, 0.3);
 }
 
 /* Berita Cards */
