@@ -21,7 +21,7 @@
 }
 
 body {
-    background-image: url(image/bgnewspaper.jpg);
+    background-image: url(../asset/image/bgnewspaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Merriweather;
