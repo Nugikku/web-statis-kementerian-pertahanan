@@ -98,11 +98,17 @@ nav .logo {
 .slider-container {
     position: relative;
     width: 100%;
-    height: 55vh; 
-    min-height: 400px;
+    aspect-ratio: 21 / 7;
+    max-height: 500px;
     overflow: hidden; 
-    background-color: #111;
+    background-color: #000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 /* Pengaturan untuk setiap slide (frame) */
@@ -123,10 +129,10 @@ nav .logo {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center; 
     display: block;
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
 
 /* KEYFRAMES, KELAS ANIMASI, DAN TOMBOL TETAP SAMA... */
@@ -162,22 +168,25 @@ nav .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #9D0000;
     font-weight: bold;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.3);
+    background-color: #fdd700;
+    border: 2px solid #9D0000;
     border-radius: 50%;
     user-select: none;
     transition: all 0.3s ease;
     z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 .next { right: 30px; }
 .prev { left: 30px; }
 .prev:hover, .next:hover { 
-    background-color: rgba(255, 255, 255, 0.3); 
-    transform: translateY(-50%) scale(1.1);
+    background-color: #9D0000;
+    color: #fdd700;
+    border-color: #fdd700;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 
 /* Indicators */
